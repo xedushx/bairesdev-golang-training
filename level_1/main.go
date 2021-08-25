@@ -5,6 +5,7 @@ import (
 	ageFilter "com/bairesdev/training/packer/exercises/age_filter"
 	"com/bairesdev/training/packer/exercises/calculator"
 	"com/bairesdev/training/packer/exercises/inventory"
+	level1Test "com/bairesdev/training/packer/exercises/level1_test"
 	"fmt"
 	"os"
 )
@@ -43,10 +44,6 @@ func main() {
 	localInventory.AddItem("A4001", p4)
 	localInventory.AddItem("A5001", p5)
 
-	for k, v := range localInventory.GetProducts() {
-		fmt.Printf("Product: %-10v -- %-10v \n", k, v.Name)
-	}
-
 	// 4.
 	fmt.Println("\n\n********** 4. ************")
 	var queue []int
@@ -65,6 +62,17 @@ func main() {
 
 	queue = dequeue(queue)
 	fmt.Println("Queue:", queue)
+
+	// Level 1 TEST
+	fmt.Println("\n\n********** LEVEL 1 TEST. ************")
+	s := level1Test.NewStack()
+	s.Push(&level1Test.Node{Value: "Name 1"})
+	s.Push(&level1Test.Node{Value: "Name 2"})
+	s.Push(&level1Test.Node{Value: "Name 3"})
+	fmt.Println(s.ToString())
+	fmt.Println("Out: ", s.Pop().ToString())
+	s.Push(&level1Test.Node{Value: "Name 4"})
+	fmt.Println(s.ToString())
 
 	// 2.
 	fmt.Println("\n\n********** 2. ************")
