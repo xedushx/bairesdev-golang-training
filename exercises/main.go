@@ -2,10 +2,10 @@ package main
 
 import (
 	"bufio"
-	ageFilter "com/bairesdev/training/packer/exercises/age_filter"
-	"com/bairesdev/training/packer/exercises/calculator"
-	"com/bairesdev/training/packer/exercises/inventory"
-	level1Test "com/bairesdev/training/packer/exercises/level1_test"
+	ageFilter "com/bairesdev/training/packer/level1/age_filter"
+	"com/bairesdev/training/packer/level1/calculator"
+	"com/bairesdev/training/packer/level1/inventory"
+	level1Test "com/bairesdev/training/packer/level1/level1_test"
 	"fmt"
 	"os"
 )
